@@ -10,9 +10,9 @@ pipeline:
   - name: CRFEntityExtractor
   - name: EntitySynonymMapper
   - name: CountVectorsFeaturizer
-  - name: custom_featurizer.UniversalSentenceEncoderFeaturizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
+  - name: custom_featurizer.UniversalSentenceEncoderFeaturizer
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"

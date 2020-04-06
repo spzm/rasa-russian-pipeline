@@ -11,7 +11,7 @@ class UniversalSentenceEncoderFeaturizer(DenseFeaturizer):
     # Load ELMo model from deeppavlov.ai
     # http://docs.deeppavlov.ai/en/master/features/pretrained_vectors.html#elmo
     # TFHUB_URL = "http://files.deeppavlov.ai/deeppavlov_data/elmo_ru-news_wmt11-16_1.5M_steps.tar.gz"
-    TFHUB_URL = "https://github.com/deepmipt/DeepPavlov/blob/master/deeppavlov/configs/embedder/elmo_ru_wiki.json"
+    TFHUB_URL = "http://files.deeppavlov.ai/deeppavlov_data/elmo_ru-wiki_600k_steps.tar.gz"
 
     name = "custom_featurizer"
 
