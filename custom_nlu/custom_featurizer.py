@@ -1,17 +1,17 @@
 from rasa.nlu.featurizers.featurizer import DenseFeaturizer
 
-import tensorflow_hub as hub
 import tensorflow as tf
+import tensorflow_hub as hub
 
 class UniversalSentenceEncoderFeaturizer(DenseFeaturizer):
     """Appends a universal sentence encoding to the message's text_features."""
 
     # URL of the TensorFlow Hub Module
-    # TFHUB_URL = "https://tfhub.dev/google/universal-sentence-encoder/4"
     # Load ELMo model from deeppavlov.ai
     # http://docs.deeppavlov.ai/en/master/features/pretrained_vectors.html#elmo
-    # TFHUB_URL = "http://files.deeppavlov.ai/deeppavlov_data/elmo_ru-news_wmt11-16_1.5M_steps.tar.gz"
-    TFHUB_URL = "http://files.deeppavlov.ai/deeppavlov_data/elmo_ru-wiki_600k_steps.tar.gz"
+    TFHUB_URL = "http://files.deeppavlov.ai/deeppavlov_data/elmo_ru-news_wmt11-16_1.5M_steps.tar.gz"
+
+    # TFHUB_URL = "https://tfhub.dev/google/universal-sentence-encoder/4"
 
     name = "custom_featurizer"
 
@@ -47,8 +47,10 @@ class UniversalSentenceEncoderFeaturizer(DenseFeaturizer):
         # the encoding tensor.
         sentence = tf.constant([message.text])
         feature_vector = self.embed(sentence)
+
         if self.version == 'v2':
             feature_vector = feature_vector[0]
+
         # Concatenate the feature vector with any existing text features
         features = self._combine_with_existing_dense_features(message, feature_vector)
         # Set the feature, overwriting any existing `text_features`

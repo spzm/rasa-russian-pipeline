@@ -1,6 +1,6 @@
-rasa==1.9.5
-rasa-sdk==1.9.0
+rasa==1.10.9
+rasa-sdk==1.10.2
 scikit-learn==0.22.2.post1
-spacy==2.2.4
+spacy==2.3.0
 tensorflow==2.1.0
 tensorflow-hub==0.8.0

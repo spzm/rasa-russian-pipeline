@@ -4,15 +4,12 @@
 language: "ru"
 pipeline:
   - name: WhitespaceTokenizer
-#  - name: SpacyNLP
-#  - name: SpacyTokenizer
-#  - name: SpacyFeaturizer
   - name: CRFEntityExtractor
   - name: EntitySynonymMapper
   - name: CountVectorsFeaturizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
-  - name: custom_featurizer.UniversalSentenceEncoderFeaturizer
+  - name: custom_nlu.custom_featurizer.UniversalSentenceEncoderFeaturizer
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"

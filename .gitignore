@@ -140,4 +140,4 @@ cython_debug/
 
 # RASA
 results
-models
+models/

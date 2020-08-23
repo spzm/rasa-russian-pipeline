@@ -21,6 +21,14 @@
   - utter_did_that_help
 * deny
   - utter_goodbye
+  
+## time check
+
+* greet
+  - utter_greet
+* what_time
+  - utter_time_answer
+  - utter_anything_else
 
 ## say goodbye
 * goodbye
