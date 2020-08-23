@@ -29,10 +29,10 @@ responses:
   - text: "Пока"
 
   utter_iamabot:
-  - text: "Я бот, c Rasa под капотом."
+  - text: "Я бот, c Rasa под капотом"
 
   utter_time_answer:
-  - text: "Все еще не могу подскахать"
+  - text: "Все еще не могу подсказать"
 
 session_config:
   session_expiration_time: 60
